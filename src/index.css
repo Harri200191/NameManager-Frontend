@@ -576,18 +576,20 @@ a:hover {
 
 .--butt
 {  background-color: purple; /* Background color */
+  margin-top: 10px;
+  margin-bottom: 15px;
   color: white; /* Text color */
   padding: 10px 20px; /* Padding */
   border: none; /* Remove border */
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Add cursor pointer on hover */
   align-items: center;
-  transform: translateX(220%);
+  transform: translateX(210%);
   font-size: medium;
 }
 
 /* Change button color on hover */
-input[type="button"]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
 }
 
@@ -667,4 +669,37 @@ textarea {
 
 input[type="text"]:focus + .results {
   display: block;
+}
+
+.output_txt{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  transform-origin: 0 50%;
+  animation: revealText 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+
+
+/* Different fonts for each word */
+.output_txt:nth-child(odd) {
+  font-family: 'Times New Roman', serif;
+}
+
+.output_txt:nth-child(even) {
+  font-family: 'Courier New', monospace;
+}
+
+@keyframes revealText {
+  0% {
+    transform: scaleX(0) skewX(-20deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1) skewX(0);
+    opacity: 1;
+  }
 }
