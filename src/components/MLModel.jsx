@@ -7,7 +7,7 @@ const MLModel = () => {
       "https://api-inference.huggingface.co/models/Hari93/res",
       {
         headers: {
-          Authorization: "Bearer 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",
+          Authorization: process.env.AUTH_KEY,
         },
         method: "POST",
         body: JSON.stringify(data),
@@ -23,7 +23,8 @@ const MLModel = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputText != "") {
-      const resultText = query({ inputs: inputText }).then((response) => {
+      const resultText = query({ "inputs": inputText , "return_full_text": True}).then((response) => {
+        console.log(response)
         setResult(response[0].generated_text);
       });
     } else {
