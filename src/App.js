@@ -6,16 +6,14 @@
 import Tasklist from "./components/Tasklist";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Search from "./components/Search";
+import DeleteRecords from "./components/DeleteRecords";
 
 export const URL = process.env.REACT_APP_SERVER_URL
 
 function App() {
   return (
     <div className="app">
-      <div className="search-area">
-        <Search/>
-      </div>
+      <DeleteRecords/>
       <div className="task-container">
           <Tasklist/>
       </div>

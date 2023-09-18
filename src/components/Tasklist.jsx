@@ -7,7 +7,6 @@ import axios from 'axios'
 import { URL } from '../App';
 import loadingimage from "../assets/loading.gif"
 import MLModel from './MLModel';
-import Search from './Search';
 
 //http://localhost:5000/api/tasks
 
@@ -127,8 +126,6 @@ const Tasklist = () =>
     }
 
   }
-
-
 
   const searchfortherecord = async () => {
     try{

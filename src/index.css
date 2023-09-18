@@ -490,6 +490,10 @@ a:hover {
   background-color: var(--color-primary);
 }
 
+.task-form button:clicked {
+  transform: translateY(5px)
+}
+
 .task {
   position: relative;
   display: flex;
@@ -586,6 +590,12 @@ a:hover {
   align-items: center;
   transform: translateX(210%);
   font-size: medium;
+}
+
+.--butt.clicked{
+    background-color: #e74c3c;
+    transform: translateY(5px); /* Move the button down by 5 pixels */
+
 }
 
 /* Change button color on hover */
@@ -702,4 +712,30 @@ input[type="text"]:focus + .results {
     transform: scaleX(1) skewX(0);
     opacity: 1;
   }
+}
+
+.--butt:active {
+  background-color: var(--color-success); /* New color when clicked */
+}
+
+.--butt:hover {
+  background-color: var(--color-primary);
+}
+
+.Result-Sent p{
+  display:inline;
+}
+
+.Summary-head{
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+.Final-Head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
